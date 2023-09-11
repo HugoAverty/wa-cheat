@@ -34,14 +34,14 @@ function closePopup(){
 }
 
 function move() {
-    WA.player.moveTo(300, 300, 10).then((result) => {
+    WA.player.moveTo(300, 300, 30).then((result) => {
         if (!result.cancelled) {
-            WA.player.moveTo(100, 100, 10);
+            WA.player.moveTo(100, 100, 40);
         }
     });
     setTimeout(() => {
         move();
-    }, 4000);
+    }, 1000);
 }
 
 move();
