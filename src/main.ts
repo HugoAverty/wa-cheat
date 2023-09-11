@@ -33,4 +33,19 @@ function closePopup(){
     }
 }
 
+function move() {
+    WA.player.moveTo(300, 300, 10).then((result) => {
+        if (!result.cancelled) {
+            WA.player.moveTo(100, 100, 10);
+        }
+    });
+    setTimeout(() => {
+        move();
+    }, 4000);
+}
+
+move();
+
+
+
 export {};
